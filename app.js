@@ -10,6 +10,10 @@ app.use(cors())
 
 // checkout api
 
+app.get('/', (req, res) => {
+    res.send('products api running new deploy');
+});
+
 app.post("/api/create-checkout-session", async(req, res)=>{
     const {products} = req.body;
 
