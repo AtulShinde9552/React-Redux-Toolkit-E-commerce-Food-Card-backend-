@@ -1,8 +1,8 @@
+require('dotenv').config();
 const express = require("express")
 const app = express();
-const cors = require("cors")
-require('dotenv').config();
 const PORT = process.env.PORT || 7000;
+const cors = require("cors")
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 app.use(express.json())
